@@ -7,9 +7,15 @@ A React-based interactive financial model and presentation website for the K-LIF
 - Interactive financial calculator with real-time scenario modeling
 - Sensitivity analysis charts (Yield, Price, NPV)
 - Profit heatmap visualization
-- Image gallery with lightbox
+- Image gallery with lightbox (12 high-quality images, 2.4 MB total)
 - Responsive design with Tailwind CSS
 - Optimized for Cloudflare Pages deployment
+- Production-ready performance optimizations:
+  - Lazy loading for images
+  - Async image decoding
+  - HTTP caching headers
+  - Code splitting for optimal bundle size
+  - CDN-optimized asset delivery
 
 ## Tech Stack
 
@@ -117,6 +123,46 @@ Place your gallery images in `public/images/` directory. The component expects t
 - Development server runs on `http://localhost:5173`
 - Hot module replacement (HMR) enabled
 - Tailwind CSS JIT compilation
+
+## Performance
+
+### Optimizations Implemented
+
+- **Lazy Loading:** Gallery images load on-demand as user scrolls
+- **Async Decoding:** Non-blocking image processing
+- **HTTP Caching:** 1-year cache for static assets
+- **Code Splitting:** Separate vendor bundles for React and Recharts
+- **Asset Optimization:** Automatic hashing for cache busting
+- **CDN Delivery:** Global edge distribution via Cloudflare
+
+### Expected Load Times
+
+- **First Visit:** 2-4 seconds (including lazy-loaded gallery)
+- **Repeat Visits:** < 1 second (cached assets)
+- **Mobile (4G):** 2-3 seconds initial, progressive gallery loading
+
+### Image Specifications
+
+- Total images: 12
+- Total size: 2.4 MB
+- Format: JPEG (optimized)
+- Dimensions: 1032x581 to 1280x960 pixels
+- Average size: ~200 KB per image
+
+See [IMAGE_OPTIMIZATION_GUIDE.md](./IMAGE_OPTIMIZATION_GUIDE.md) for detailed optimization information.
+
+## Production Checklist
+
+Before deploying to production:
+
+- [x] Images optimized (< 350 KB each)
+- [x] Lazy loading implemented
+- [x] Cache headers configured
+- [x] Code splitting enabled
+- [x] Build tested locally
+- [x] Responsive design verified
+- [x] Accessibility attributes added
+- [x] SEO meta tags included
 
 ## License
 

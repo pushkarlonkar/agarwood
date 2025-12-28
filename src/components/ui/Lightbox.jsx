@@ -39,6 +39,8 @@ export function Lightbox({ images, currentIndex, isOpen, onClose, onPrevious, on
         <img 
           src={images[currentIndex].src} 
           alt={images[currentIndex].caption}
+          loading="eager"
+          decoding="async"
           className="max-w-full max-h-[75vh] object-contain mx-auto"
         />
         <p className="text-center text-white/70 mt-4 font-light">{images[currentIndex].caption}</p>
