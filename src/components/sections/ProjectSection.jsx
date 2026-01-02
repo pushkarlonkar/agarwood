@@ -177,10 +177,11 @@ export function ProjectSection({ expandedMethod, setExpandedMethod }) {
                         {item.images.map((img, j) => (
                           <div key={j} className="relative aspect-[4/3] bg-stone-800 rounded-lg overflow-hidden">
                             <img 
-                              src={img} 
+                              src={img.replace(/ /g, '%20')} 
                               alt={`${item.method} - Image ${j + 1}`}
                               className="w-full h-full object-cover opacity-90 saturate-[0.85]"
                               onError={(e) => {
+                                console.error('Failed to load image:', img);
                                 e.target.style.display = 'none';
                                 e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center text-stone-500 text-sm">Image placeholder</div>';
                               }}

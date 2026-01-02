@@ -11,8 +11,8 @@ export const inoculationMethods = [
     method: 'Trung\'s Method', 
     date: 'February 2023',
     images: [
-      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Trung\'s Method 1.jpeg', 
-      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Trung\'s Method 2.jpeg'
+      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Trungs Method 1.jpeg', 
+      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Trungs Method 2.jpeg'
     ]
   },
   { 
