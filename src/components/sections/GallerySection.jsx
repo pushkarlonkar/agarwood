@@ -21,7 +21,7 @@ export function GallerySection() {
       <div className="max-w-7xl mx-auto px-8 relative">
         <div className="text-center mb-16">
           <p className="text-sm uppercase tracking-[0.3em] text-emerald-400 font-sans-refined mb-4">Gallery</p>
-          <h2 className="text-5xl md:text-6xl font-light text-white mb-4">The K-Life Investments Estate</h2>
+          <h2 className="text-5xl md:text-6xl font-light text-white mb-4" style={{ fontFamily: 'Papyrus, fantasy' }}>The K-LIFE Estate</h2>
           <p className="text-lg text-stone-300 max-w-2xl mx-auto">
             Explore our sustainable agarwood plantation in the highlands of Sri Lanka — where tradition meets innovation.
           </p>

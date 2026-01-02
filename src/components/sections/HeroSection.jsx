@@ -23,7 +23,7 @@ export function HeroSection() {
         </h1>
         
         <p className="animate-fade-up-delay-2 text-lg md:text-xl font-light text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed">
-          An inoculation-led agarwood value enhancement pilot, supported by a scenario-based financial model.
+          Value addition through effective inoculation of agarwood trees, supported by scenario based financial model..
         </p>
         
         <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row gap-4 justify-center">

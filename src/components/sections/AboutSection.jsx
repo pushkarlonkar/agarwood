@@ -7,13 +7,13 @@ export function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           <div className="lg:col-span-4">
             <p className="text-sm uppercase tracking-[0.3em] text-stone-500 font-sans-refined mb-4">About</p>
-            <h2 className="text-5xl md:text-6xl font-light leading-tight">
-              K-LIFE<br /><em className="italic">(Pvt) Ltd.</em>
+            <h2 className="text-5xl md:text-6xl font-light leading-tight" style={{ fontFamily: 'Papyrus, fantasy' }}>
+              K-LIFE<br />Investments
             </h2>
           </div>
           <div className="lg:col-span-7 lg:col-start-6 space-y-6">
             <p className="text-xl text-stone-700 leading-relaxed">
-              K-LIFE (Pvt) Ltd. is a leader in sustainable agriculture and export-driven agribusiness. Since its establishment in 2013, the company has integrated traditional knowledge with modern technology to develop profitable, eco-friendly ventures.
+              K-LIFE Investments is a leader in sustainable agriculture and export-driven agribusiness. Since its establishment in 2013, the company has integrated traditional knowledge with modern technology to develop profitable, eco-friendly ventures.
             </p>
             <p className="text-lg text-stone-600 leading-relaxed">
               We have successfully delivered innovative projects addressing biodiversity loss, climate resilience, and sustainable land management. Our approach centers on multi-stakeholder collaboration with local farmers and international organizations to co-create scalable solutions.

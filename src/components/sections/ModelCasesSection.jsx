@@ -3,7 +3,7 @@ import { scenarios } from '../../data/scenarios';
 
 export function ModelCasesSection() {
   return (
-    <section className="py-20 bg-white">
+    <section id="model" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
           <div>

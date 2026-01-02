@@ -7,11 +7,11 @@ export function CTASection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-900/20 rounded-full blur-3xl" />
       
       <div className="max-w-3xl mx-auto px-8 text-center relative">
-        <h2 className="text-5xl md:text-6xl font-light mb-6">
-          Ready to Explore<br /><em className="italic text-stone-400">This Opportunity?</em>
+        <h2 className="text-5xl md:text-6xl font-light mb-6" style={{ fontFamily: 'Papyrus, fantasy' }}>
+          Ready to Explore<br /><em className="italic text-emerald-200">This Opportunity?</em>
         </h2>
         <p className="text-lg text-stone-300 mb-12 leading-relaxed">
-          This pilot represents a unique chance to unlock value in a dormant sector while supporting sustainable agroforestry practices.
+          This pilot represents a unique chance to unlock value in a sector that has not reached its maximum potential while supporting sustainable agroforestry practices.
         </p>
         <button 
           onClick={() => document.getElementById('calculator').scrollIntoView({ behavior: 'smooth' })}
