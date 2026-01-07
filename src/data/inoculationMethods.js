@@ -1,18 +1,18 @@
 export const inoculationMethods = [
   { 
-    method: 'Brafta Method', 
+    method: 'Local Inoculant', 
     date: 'August 2022',
     images: [
-      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Brafta Method 1.jpeg', 
-      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Brafta Method 2.jpeg'
+      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Local Incoculant 1.png', 
+      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Local Incoculant 2.png'
     ]
   },
   { 
-    method: 'Trung\'s Method', 
+    method: 'Truong Thanh Khoan\'s Method', 
     date: 'February 2023',
     images: [
-      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Trungs Method 1.jpeg', 
-      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Trungs Method 2.jpeg'
+      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Truong Thanh Khoans Method 1.png', 
+      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Truong Thanh Khoans Method 2.jpeg'
     ]
   },
   { 
@@ -44,7 +44,10 @@ export const inoculationMethods = [
     date: 'August 2025',
     images: [
       '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Pipe Method 1.jpeg', 
-      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Pipe Method 2.jpeg'
+      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Pipe Method 2.jpeg',
+      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Pipe Method 3.jpg',
+      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Pipe Method 4.jpg',
+      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Pipe Method 5.jpg'
     ]
   }
 ];

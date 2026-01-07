@@ -79,7 +79,7 @@ export function HistorySection({ expandedYears, toggleYear }) {
                       <div className="flex-1 border-l border-stone-200 pl-8 md:pl-12 py-6 min-h-[140px]">
                         <div className="flex items-start justify-between gap-6">
                           {/* Year and title */}
-                          <div className="flex-1">
+                          <div className="flex-1 text-center">
                             <span className={`
                               text-4xl md:text-5xl transition-all duration-500 block mb-3
                               ${isExpanded ? 'text-emerald-700 font-medium' : 'text-stone-800 font-light group-hover:text-stone-900'}
@@ -87,7 +87,7 @@ export function HistorySection({ expandedYears, toggleYear }) {
                               {item.year}
                             </span>
                             <h3 className={`
-                              text-base md:text-lg leading-relaxed transition-all duration-500 max-w-2xl
+                              text-base md:text-lg leading-relaxed transition-all duration-500 max-w-2xl mx-auto
                               ${isExpanded ? 'text-emerald-700 font-semibold' : 'text-stone-700 font-medium group-hover:text-stone-800'}
                             `}>
                               {item.title.replace('...', '')}
@@ -129,36 +129,65 @@ export function HistorySection({ expandedYears, toggleYear }) {
                       {/* Left spacer to align with tree column */}
                       <div className="w-28 md:w-36 flex-shrink-0" />
                       
-                      {/* Content */}
-                      <div className={`
-                        flex-1 border-l border-stone-200 pl-8 md:pl-12 pb-12 transform transition-all duration-700
-                        ${isExpanded ? 'translate-y-0' : '-translate-y-8'}
-                      `}>
-                        {/* Description */}
-                        <p className="text-stone-600 leading-[1.9] text-lg font-light max-w-3xl mb-10">
-                          {item.description}
-                        </p>
+          {/* Content */}
+          <div className={`
+            flex-1 border-l border-stone-200 pl-8 md:pl-12 pb-12 transform transition-all duration-700
+            ${isExpanded ? 'translate-y-0' : '-translate-y-8'}
+          `}>
+            {/* Description */}
+            <p className="text-stone-600 leading-[1.9] text-lg font-light max-w-3xl mb-10 mx-auto text-center">
+              {item.description}
+            </p>
                         
-                        {/* Image */}
-                        <div className="relative group/img max-w-2xl">
-                          <div className="aspect-[16/10] overflow-hidden bg-stone-100">
-                            <img 
-                              src={item.image} 
-                              alt={`K-LIFE Estate ${item.year}`}
-                              className="w-full h-full object-cover transition-all duration-1000 ease-out group-hover/img:scale-105"
-                              onError={(e) => {
-                                e.target.parentElement.innerHTML = `
-                                  <div class="w-full h-full bg-gradient-to-br from-emerald-900 via-emerald-800 to-stone-900 flex items-center justify-center">
-                                    <span class="text-white/30 text-sm uppercase tracking-widest">Estate ${item.year}</span>
-                                  </div>
-                                `;
-                              }}
-                            />
-                          </div>
-                          {/* Artistic frame corners */}
-                          <div className="absolute -top-2 -left-2 w-6 h-6 border-l border-t border-emerald-800/30" />
-                          <div className="absolute -bottom-2 -right-2 w-6 h-6 border-r border-b border-emerald-800/30" />
+            {/* Images */}
+            {item.images ? (
+              <div className="flex flex-col gap-6 max-w-5xl mx-auto">
+                {item.images.map((img, imgIndex) => {
+                  // Encode spaces for proper URL encoding
+                  const encodedImg = img.replace(/ /g, '%20');
+                  return (
+                    <div key={imgIndex} className="relative group/img w-full">
+                      <div className="aspect-[16/10] overflow-hidden bg-stone-100 rounded-lg flex items-center justify-center">
+                        <img 
+                          src={encodedImg} 
+                          alt={`K-LIFE Estate ${item.year} - ${imgIndex + 1}`}
+                          className="w-full h-full object-contain transition-all duration-1000 ease-out group-hover/img:scale-105"
+                          onError={(e) => {
+                            console.error('Failed to load image:', img, 'Encoded:', encodedImg);
+                            e.target.parentElement.innerHTML = `
+                              <div class="w-full h-full bg-gradient-to-br from-emerald-900 via-emerald-800 to-stone-900 flex items-center justify-center">
+                                <span class="text-white/30 text-xs uppercase tracking-widest">Estate ${item.year}</span>
+                              </div>
+                            `;
+                          }}
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="relative group/img max-w-2xl mx-auto">
+                <div className="aspect-[16/10] overflow-hidden bg-stone-100 flex items-center justify-center">
+                  <img 
+                    src={item.image.replace(/ /g, '%20')} 
+                    alt={`K-LIFE Estate ${item.year}`}
+                    className="w-full h-full object-contain transition-all duration-1000 ease-out group-hover/img:scale-105"
+                    onError={(e) => {
+                      console.error('Failed to load image:', item.image);
+                      e.target.parentElement.innerHTML = `
+                        <div class="w-full h-full bg-gradient-to-br from-emerald-900 via-emerald-800 to-stone-900 flex items-center justify-center">
+                          <span class="text-white/30 text-sm uppercase tracking-widest">Estate ${item.year}</span>
                         </div>
+                      `;
+                    }}
+                  />
+                </div>
+                {/* Artistic frame corners */}
+                <div className="absolute -top-2 -left-2 w-6 h-6 border-l border-t border-emerald-800/30" />
+                <div className="absolute -bottom-2 -right-2 w-6 h-6 border-r border-b border-emerald-800/30" />
+              </div>
+            )}
                       </div>
                     </div>
                   </div>

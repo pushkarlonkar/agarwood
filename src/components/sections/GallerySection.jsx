@@ -15,14 +15,16 @@ export function GallerySection() {
   };
 
   return (
-    <section id="gallery" className="py-32 bg-stone-900 relative overflow-hidden">
+    <section id="gallery" className="py-32 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-stone-900 via-emerald-950 to-stone-900" />
       <div className="absolute inset-0 grain opacity-[0.02]" />
+      <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-emerald-800/20 rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto px-8 relative">
         <div className="text-center mb-16">
           <p className="text-sm uppercase tracking-[0.3em] text-emerald-400 font-sans-refined mb-4">Gallery</p>
-          <h2 className="text-5xl md:text-6xl font-light text-white mb-4" style={{ fontFamily: 'Papyrus, fantasy' }}>The K-LIFE Estate</h2>
-          <p className="text-lg text-stone-300 max-w-2xl mx-auto">
+          <h2 className="text-5xl md:text-6xl font-light text-white mb-4">The K-LIFE Investments Estate</h2>
+          <p className="text-lg text-white/60 max-w-2xl mx-auto">
             Explore our sustainable agarwood plantation in the highlands of Sri Lanka — where tradition meets innovation.
           </p>
         </div>
@@ -38,7 +40,7 @@ export function GallerySection() {
                 index === 3 ? 'col-span-2' : ''
               }`}
             >
-              <div className={`${index === 0 ? 'aspect-square' : index === 3 ? 'aspect-video' : 'aspect-square'} bg-stone-800`}>
+              <div className={`${index === 0 ? 'aspect-square' : index === 3 ? 'aspect-video' : 'aspect-square'} bg-emerald-950/50`}>
                 <img 
                   src={image.src} 
                   alt={image.caption}

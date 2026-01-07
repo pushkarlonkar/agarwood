@@ -12,14 +12,20 @@ export function AboutSection() {
             </h2>
           </div>
           <div className="lg:col-span-7 lg:col-start-6 space-y-6">
-            <p className="text-xl text-stone-700 leading-relaxed">
-              K-LIFE Investments is a leader in sustainable agriculture and export-driven agribusiness. Since its establishment in 2013, the company has integrated traditional knowledge with modern technology to develop profitable, eco-friendly ventures.
+            <p className="text-lg text-stone-600 leading-relaxed">
+              K‑LIFE Investments is a Sri Lanka–based agribusiness company focused on sustainable agriculture and export‑oriented value chains. Since its establishment in 2013, the company has combined traditional land‑use knowledge with modern agronomic and scientific practices to develop commercially viable, environmentally responsible ventures.
             </p>
             <p className="text-lg text-stone-600 leading-relaxed">
-              We have successfully delivered innovative projects addressing biodiversity loss, climate resilience, and sustainable land management. Our approach centers on multi-stakeholder collaboration with local farmers and international organizations to co-create scalable solutions.
+              K‑LIFE has delivered projects addressing biodiversity restoration, climate resilience, and sustainable land management, working closely with local farming communities and technical partners. Its approach emphasizes long‑term value creation through collaboration, applied research, and scalable production models aligned with global markets.
             </p>
             <p className="text-lg text-stone-600 leading-relaxed">
-              Through our agarwood cultivation initiatives using polyculture systems, K-LIFE combines environmental stewardship with business acumen to create high-value commodities for global markets.
+              The company has pioneered an agarwood‑based polyculture system in Sri Lanka, leveraging the country's favorable climate and ecological conditions. By integrating agarwood species with perennial companion crops and native trees, K‑LIFE's pilot project in Bandarawela was designed to demonstrate a model that delivers modest but stable returns while functioning as a climate‑positive land‑use system.
+            </p>
+            <p className="text-lg text-stone-600 leading-relaxed">
+              Alongside plantation development, K‑LIFE has worked with local scientists to develop a biomimetic agarwood inoculation method that is faster and more effective than several locally and internationally available alternatives. This research has broader relevance beyond K‑LIFE's own operations, addressing a critical risk faced by smallholders, where ineffective inoculation can render years of cultivation economically unviable.
+            </p>
+            <p className="text-lg text-stone-600 leading-relaxed">
+              At the core of K‑LIFE's philosophy is the integration of commercial agarwood production with native reforestation, creating managed forest systems that generate income while enhancing biodiversity, carbon sequestration, and ecosystem stability. This model, which benefits both the commercial crop and the surrounding environment, is intended to be replicated and scaled across suitable regions of the country.
             </p>
             
             <div className="pt-8 grid grid-cols-2 gap-8 border-t border-stone-200 mt-12">
@@ -28,8 +34,8 @@ export function AboutSection() {
                 <p className="text-sm uppercase tracking-wide text-stone-500 mt-1 font-sans-refined">Established</p>
               </div>
               <div>
-                <p className="text-4xl font-light text-emerald-800">5K</p>
-                <p className="text-sm uppercase tracking-wide text-stone-500 mt-1 font-sans-refined">Pilot Trees</p>
+                <p className="text-4xl font-light text-emerald-800">6K</p>
+                <p className="text-sm uppercase tracking-wide text-stone-500 mt-1 font-sans-refined">Harvestable Trees</p>
               </div>
             </div>
           </div>

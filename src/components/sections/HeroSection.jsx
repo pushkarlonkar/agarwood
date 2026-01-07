@@ -10,10 +10,6 @@ export function HeroSection() {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-800/20 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-amber-900/10 rounded-full blur-3xl" />
       
-      {/* Geometric accent */}
-      <div className="absolute top-20 right-20 w-32 h-32 border border-white/10 rotate-45 hidden lg:block" />
-      <div className="absolute bottom-32 left-20 w-24 h-24 border border-white/5 rotate-12 hidden lg:block" />
-      
       <div className="relative z-10 max-w-4xl mx-auto px-8 text-center text-white">
         <p className="animate-fade-up text-xs uppercase tracking-[0.4em] text-emerald-300/70 mb-8 font-sans-refined">Investment Pilot · Sri Lanka</p>
         

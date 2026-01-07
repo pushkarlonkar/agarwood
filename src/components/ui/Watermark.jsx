@@ -1,7 +1,7 @@
 import React from 'react';
 
 export function Watermark({ activeSection }) {
-  const isLightSection = ['about', 'history', 'calculator', 'model'].includes(activeSection);
+  const isLightSection = ['about', 'history', 'calculator', 'model', 'valuechain'].includes(activeSection);
   
   return (
     <div 

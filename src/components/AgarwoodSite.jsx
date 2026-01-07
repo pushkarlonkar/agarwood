@@ -34,6 +34,20 @@ export default function AgarwoodSite() {
   };
 
   useEffect(() => {
+    const handleScroll = () => {
+      // If at the very top, ensure hero is active
+      if (window.scrollY < 100) {
+        setActiveSection('hero');
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check on mount
+    if (window.scrollY < 100) {
+      setActiveSection('hero');
+    }
+    
+    // IntersectionObserver for section detection
     const sections = document.querySelectorAll('section[id], section[data-section]');
     const observerOptions = {
       root: null,
@@ -53,6 +67,7 @@ export default function AgarwoodSite() {
     sections.forEach((section) => observer.observe(section));
     
     return () => {
+      window.removeEventListener('scroll', handleScroll);
       sections.forEach((section) => observer.unobserve(section));
     };
   }, []);

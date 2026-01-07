@@ -3,7 +3,7 @@ import { valueChainSteps } from '../../data/valueChainSteps';
 
 export function ValueChainSection() {
   return (
-    <section className="py-32 bg-gradient-to-b from-stone-100 to-stone-50">
+    <section id="valuechain" className="py-32 bg-gradient-to-b from-stone-100 to-stone-50">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-20">
           <p className="text-sm uppercase tracking-[0.3em] text-stone-500 font-sans-refined mb-4">Process</p>

@@ -29,7 +29,7 @@ export function ProjectSection({ expandedMethod, setExpandedMethod }) {
             Why Agarwood in Sri Lanka<br /><em className="italic text-emerald-200">Hasn't Reached Its Potential</em>
           </h2>
           <p className="text-xl text-white/70 leading-relaxed">
-            Sri Lanka has over one million planted Aquilaria trees, yet the sector hasn't reached its maximum potential. The core issue: systemic inoculation failure preventing resin formation—the source of agarwood's extraordinary value. At K-LIFE we tried multiple inoculants over 3 years to arrive at a working solution.
+            Sri Lanka has over 2~3 million planted Aquilaria trees, yet the sector hasn't reached its maximum potential. The core issue: systemic inoculation failure preventing resin formation—the source of agarwood's extraordinary value. At K-LIFE we tried multiple inoculants over 3 years to arrive at a working solution.
           </p>
         </div>
 
@@ -46,7 +46,7 @@ export function ProjectSection({ expandedMethod, setExpandedMethod }) {
         <div className="border-t border-stone-700/50 pt-20">
           {/* SECTION 1 — THE SOLUTION (TEXT + TABLE) */}
           <div className="mb-20">
-            <p className="text-sm uppercase tracking-[0.3em] text-emerald-400 font-sans-refined mb-4">The Solution</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-emerald-400 font-sans-refined mb-4">The Solution</p>
             <h3 className="text-4xl font-light mb-8 text-white">What This Investment Solves</h3>
             
             <p className="text-lg text-stone-300 leading-relaxed mb-10 max-w-4xl">
@@ -61,37 +61,62 @@ export function ProjectSection({ expandedMethod, setExpandedMethod }) {
             <h4 className="text-2xl font-light mb-6 text-emerald-300">Inoculation Methods Evaluated Over Time</h4>
             
             {/* Table */}
-            <div className="max-w-2xl mb-8">
-              <div className="border border-emerald-800/40 overflow-hidden">
-                {/* Table Header */}
-                <div className="grid grid-cols-2 bg-emerald-900/40">
-                  <div className="px-6 py-4 border-r border-emerald-800/40">
-                    <p className="text-sm uppercase tracking-wide text-emerald-400 font-sans-refined">
-                      Inoculation Method
-                    </p>
-                  </div>
-                  <div className="px-6 py-4">
-                    <p className="text-sm uppercase tracking-wide text-emerald-400 font-sans-refined">
-                      Initiation Date
-                    </p>
-                  </div>
-                </div>
-                {/* Table Rows */}
-                {inoculationMethods.map((row, i) => (
-                  <div key={i} className={`grid grid-cols-2 ${i % 2 === 0 ? 'bg-stone-800/30' : 'bg-stone-800/50'} ${i === 5 ? 'bg-emerald-900/30' : ''}`}>
-                    <div className="px-6 py-4 border-r border-emerald-800/30">
-                      <p className={`text-base ${i === 5 ? 'text-emerald-300 font-medium' : 'text-stone-200'}`}>
-                        {row.method}
-                      </p>
-                    </div>
-                    <div className="px-6 py-4">
-                      <p className={`text-base ${i === 5 ? 'text-emerald-300' : 'text-stone-400'}`}>
-                        {row.date}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className="mb-8 overflow-x-auto">
+              <table className="w-full min-w-[1000px] border border-emerald-800/40" style={{ borderCollapse: 'collapse' }}>
+                <thead>
+                  <tr className="bg-emerald-900/40">
+                    <th className="px-4 py-4 text-left text-sm uppercase tracking-wide text-emerald-400 font-sans-refined border-r border-emerald-800/40" style={{ width: '80px' }}>Year / Period</th>
+                    <th className="px-4 py-4 text-left text-sm uppercase tracking-wide text-emerald-400 font-sans-refined border-r border-emerald-800/40">Inoculant Evaluated</th>
+                    <th className="px-4 py-4 text-left text-sm uppercase tracking-wide text-emerald-400 font-sans-refined border-r border-emerald-800/40">Application Approach</th>
+                    <th className="px-4 py-4 text-left text-sm uppercase tracking-wide text-emerald-400 font-sans-refined border-r border-emerald-800/40">Result Observed</th>
+                    <th className="px-4 py-4 text-left text-sm uppercase tracking-wide text-emerald-400 font-sans-refined">Inference</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-stone-800/30 border-b border-emerald-800/30">
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Aug-22</td>
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Local inoculant</td>
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Standard application</td>
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">No agarwood formation</td>
+                    <td className="px-4 py-4 text-sm text-white align-top">Local inoculant and standard delivery were insufficient and ineffective</td>
+                  </tr>
+                  <tr className="bg-stone-800/50 border-b border-emerald-800/30">
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Feb-23</td>
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Vietnamese inoculation approach</td>
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Truong Thanh Khoan's Method</td>
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">No consistent resin formation</td>
+                    <td className="px-4 py-4 text-sm text-white align-top">Developed by Truong Thanh Khoan, widely regarded as the most famous agarwood creator in Vietnam and featured in the "Why Agarwood Is So Expensive | So Expensive" documentary by Business Insider. Despite being a widely referenced method, it did not perform under our plantation conditions and did not yield results.</td>
+                  </tr>
+                  <tr className="bg-stone-800/30 border-b border-emerald-800/30">
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Dec-23</td>
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Internationally renowned inoculant</td>
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Chinese method</td>
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">No meaningful agarwood formation</td>
+                    <td className="px-4 py-4 text-sm text-white align-top">Imported formulations did not translate into results under field conditions</td>
+                  </tr>
+                  <tr className="bg-stone-800/50 border-b border-emerald-800/30">
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Feb-24</td>
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Same international inoculant</td>
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Chainsaw cut method</td>
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">No improvement</td>
+                    <td className="px-4 py-4 text-sm text-white align-top">Changing application alone cannot compensate for ineffective biology</td>
+                  </tr>
+                  <tr className="bg-stone-800/30 border-b border-emerald-800/30">
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Dec-24</td>
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">In-house developed inoculant</td>
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Surface inoculation (sub-optimal)</td>
+                    <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Agarwood formation observed</td>
+                    <td className="px-4 py-4 text-sm text-white align-top">Biological efficacy established and laboratory validated, though the application method was sub-optimal</td>
+                  </tr>
+                  <tr className="bg-emerald-900/30">
+                    <td className="px-4 py-4 text-sm text-emerald-300 font-medium border-r border-emerald-800/30 align-top">Aug-25</td>
+                    <td className="px-4 py-4 text-sm text-emerald-300 font-medium border-r border-emerald-800/30 align-top">Same in-house inoculant</td>
+                    <td className="px-4 py-4 text-sm text-emerald-300 font-medium border-r border-emerald-800/30 align-top">Pipe-based method (Optimized Protocol)</td>
+                    <td className="px-4 py-4 text-sm text-emerald-300 font-medium border-r border-emerald-800/30 align-top">Significantly higher, repeatable formation</td>
+                    <td className="px-4 py-4 text-sm text-emerald-300 align-top">Alignment of biology and application achieved optimal results</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
             
             <p className="text-base text-stone-400 italic mb-12 max-w-3xl">
@@ -107,10 +132,10 @@ export function ProjectSection({ expandedMethod, setExpandedMethod }) {
               {whyThisMatters.map((item, i) => (
                 <li key={i} className="flex items-start gap-4 text-stone-200 text-lg">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2.5 flex-shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             
             <p className="text-lg text-stone-300 leading-relaxed mb-10 max-w-4xl">
               This transforms agarwood cultivation from a high-uncertainty agricultural activity into a disciplined biological investment framework.
@@ -123,26 +148,26 @@ export function ProjectSection({ expandedMethod, setExpandedMethod }) {
           
           {/* SECTION 2 — 2×2 MATRIX PANEL */}
           <div className="grid grid-cols-2 gap-4 mb-20">
-            <div className="bg-stone-800/50 p-6">
-              <p className="text-sm uppercase tracking-wide text-stone-400 font-sans-refined mb-2">Risk Profile</p>
-              <p className="text-3xl font-light text-emerald-400">Low</p>
-              <p className="text-base text-stone-400 mt-2">Trees already owned, costs fixed upfront</p>
-            </div>
-            <div className="bg-stone-800/50 p-6">
-              <p className="text-sm uppercase tracking-wide text-stone-400 font-sans-refined mb-2">Timeline</p>
-              <p className="text-3xl font-light text-emerald-400">3 Years</p>
-              <p className="text-base text-stone-400 mt-2">To harvest and export sale</p>
-            </div>
-            <div className="bg-stone-800/50 p-6">
-              <p className="text-sm uppercase tracking-wide text-stone-400 font-sans-refined mb-2">Market</p>
-              <p className="text-3xl font-light text-emerald-400">Established</p>
+              <div className="bg-stone-800/50 p-6">
+                <p className="text-sm uppercase tracking-wide text-stone-400 font-sans-refined mb-2">Risk Profile</p>
+                <p className="text-3xl font-light text-emerald-400">Low</p>
+                <p className="text-base text-stone-400 mt-2">Trees already owned, costs fixed upfront</p>
+              </div>
+              <div className="bg-stone-800/50 p-6">
+                <p className="text-sm uppercase tracking-wide text-stone-400 font-sans-refined mb-2">Timeline</p>
+                <p className="text-3xl font-light text-emerald-400">3 Years</p>
+                <p className="text-base text-stone-400 mt-2">To harvest and export sale</p>
+              </div>
+              <div className="bg-stone-800/50 p-6">
+                <p className="text-sm uppercase tracking-wide text-stone-400 font-sans-refined mb-2">Market</p>
+                <p className="text-3xl font-light text-emerald-400">Established</p>
               <p className="text-base text-stone-400 mt-2">ME & East Asia demand and constant demand from conglomerates such as Symrise AG</p>
-            </div>
-            <div className="bg-stone-800/50 p-6">
-              <p className="text-sm uppercase tracking-wide text-stone-400 font-sans-refined mb-2">Model</p>
-              <p className="text-3xl font-light text-emerald-400">Replicable</p>
-              <p className="text-base text-stone-400 mt-2">National reference case</p>
-            </div>
+              </div>
+              <div className="bg-stone-800/50 p-6">
+                <p className="text-sm uppercase tracking-wide text-stone-400 font-sans-refined mb-2">Model</p>
+                <p className="text-3xl font-light text-emerald-400">Replicable</p>
+                <p className="text-base text-stone-400 mt-2">National reference case</p>
+              </div>
           </div>
           
           {/* SECTION 3 — IMAGES (COLLAPSIBLE ACCORDION) */}
@@ -174,23 +199,24 @@ export function ProjectSection({ expandedMethod, setExpandedMethod }) {
                   {expandedMethod === i && (
                     <div className="p-6 bg-stone-900/50">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {item.images.map((img, j) => (
-                          <div key={j} className="relative aspect-[4/3] bg-stone-800 rounded-lg overflow-hidden">
-                            <img 
-                              src={img.replace(/ /g, '%20')} 
-                              alt={`${item.method} - Image ${j + 1}`}
-                              className="w-full h-full object-cover opacity-90 saturate-[0.85]"
-                              onError={(e) => {
-                                console.error('Failed to load image:', img);
-                                e.target.style.display = 'none';
-                                e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center text-stone-500 text-sm">Image placeholder</div>';
-                              }}
-                            />
-                            <p className="absolute bottom-2 left-2 text-xs text-white/60 bg-black/40 px-2 py-1 rounded">
-                              {item.method} — {j + 1}
-                            </p>
-                          </div>
-                        ))}
+                        {item.images.map((img, j) => {
+                          // Encode spaces and apostrophes for proper URL encoding
+                          const encodedImg = img.replace(/ /g, '%20').replace(/'/g, '%27');
+                          return (
+                            <div key={j} className="relative aspect-[4/3] bg-stone-800 rounded-lg overflow-hidden flex items-center justify-center">
+                              <img 
+                                src={encodedImg} 
+                                alt={`${item.method} - Image ${j + 1}`}
+                                className="w-full h-full object-contain opacity-90 saturate-[0.85]"
+                                onError={(e) => {
+                                  console.error('Failed to load image:', img, 'Encoded:', encodedImg);
+                                  e.target.style.display = 'none';
+                                  e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center text-stone-500 text-sm">Image placeholder</div>';
+                                }}
+                              />
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
                   )}
