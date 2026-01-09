@@ -106,7 +106,18 @@ export function ProjectSection({ expandedMethod, setExpandedMethod }) {
                     <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">In-house developed inoculant</td>
                     <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Surface inoculation (sub-optimal)</td>
                     <td className="px-4 py-4 text-sm text-stone-200 border-r border-emerald-800/30 align-top">Agarwood formation observed</td>
-                    <td className="px-4 py-4 text-sm text-white align-top">Biological efficacy established and laboratory validated, though the application method was sub-optimal</td>
+                    <td className="px-4 py-4 text-sm text-white align-top">
+                      Biological efficacy established and{' '}
+                      <a 
+                        href="/report.pdf" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/50 hover:decoration-emerald-400 transition-colors"
+                      >
+                        laboratory validated
+                      </a>
+                      , though the application method was sub-optimal
+                    </td>
                   </tr>
                   <tr className="bg-emerald-900/30">
                     <td className="px-4 py-4 text-sm text-emerald-300 font-medium border-r border-emerald-800/30 align-top">Aug-25</td>
@@ -203,11 +214,11 @@ export function ProjectSection({ expandedMethod, setExpandedMethod }) {
                           // Encode spaces and apostrophes for proper URL encoding
                           const encodedImg = img.replace(/ /g, '%20').replace(/'/g, '%27');
                           return (
-                            <div key={j} className="relative aspect-[4/3] bg-stone-800 rounded-lg overflow-hidden flex items-center justify-center">
+                            <div key={j} className="relative aspect-[4/3] bg-stone-800 rounded-lg overflow-hidden">
                               <img 
                                 src={encodedImg} 
                                 alt={`${item.method} - Image ${j + 1}`}
-                                className="w-full h-full object-contain opacity-90 saturate-[0.85]"
+                                className="w-full h-full object-cover opacity-90 saturate-[0.85]"
                                 onError={(e) => {
                                   console.error('Failed to load image:', img, 'Encoded:', encodedImg);
                                   e.target.style.display = 'none';

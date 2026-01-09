@@ -147,11 +147,11 @@ export function HistorySection({ expandedYears, toggleYear }) {
                   const encodedImg = img.replace(/ /g, '%20');
                   return (
                     <div key={imgIndex} className="relative group/img w-full">
-                      <div className="aspect-[16/10] overflow-hidden bg-stone-100 rounded-lg flex items-center justify-center">
+                      <div className="aspect-[16/10] overflow-hidden bg-stone-100 rounded-lg">
                         <img 
                           src={encodedImg} 
                           alt={`K-LIFE Estate ${item.year} - ${imgIndex + 1}`}
-                          className="w-full h-full object-contain transition-all duration-1000 ease-out group-hover/img:scale-105"
+                          className="w-full h-full object-cover transition-all duration-1000 ease-out group-hover/img:scale-105"
                           onError={(e) => {
                             console.error('Failed to load image:', img, 'Encoded:', encodedImg);
                             e.target.parentElement.innerHTML = `
@@ -168,11 +168,11 @@ export function HistorySection({ expandedYears, toggleYear }) {
               </div>
             ) : (
               <div className="relative group/img max-w-2xl mx-auto">
-                <div className="aspect-[16/10] overflow-hidden bg-stone-100 flex items-center justify-center">
+                <div className="aspect-[16/10] overflow-hidden bg-stone-100">
                   <img 
                     src={item.image.replace(/ /g, '%20')} 
                     alt={`K-LIFE Estate ${item.year}`}
-                    className="w-full h-full object-contain transition-all duration-1000 ease-out group-hover/img:scale-105"
+                    className="w-full h-full object-cover transition-all duration-1000 ease-out group-hover/img:scale-105"
                     onError={(e) => {
                       console.error('Failed to load image:', item.image);
                       e.target.parentElement.innerHTML = `
