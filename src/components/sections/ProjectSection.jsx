@@ -213,12 +213,15 @@ export function ProjectSection({ expandedMethod, setExpandedMethod }) {
                         {item.images.map((img, j) => {
                           // Encode spaces and apostrophes for proper URL encoding
                           const encodedImg = img.replace(/ /g, '%20').replace(/'/g, '%27');
+                          // For Chinese Method's second image, show top part instead of center
+                          const isChineseMethodSecondImage = item.method === 'Chinese Method' && j === 1;
                           return (
                             <div key={j} className="relative aspect-[4/3] bg-stone-800 rounded-lg overflow-hidden">
                               <img 
                                 src={encodedImg} 
                                 alt={`${item.method} - Image ${j + 1}`}
-                                className="w-full h-full object-cover opacity-90 saturate-[0.85]"
+                                className={`w-full h-full object-cover opacity-90 saturate-[0.85] ${isChineseMethodSecondImage ? 'object-top' : ''}`}
+                                style={isChineseMethodSecondImage ? { objectPosition: 'top' } : {}}
                                 onError={(e) => {
                                   console.error('Failed to load image:', img, 'Encoded:', encodedImg);
                                   e.target.style.display = 'none';

@@ -18,11 +18,6 @@ export function HistorySection({ expandedYears, toggleYear }) {
               <span className="text-emerald-800">History</span>
             </h2>
           </div>
-          <div className="lg:col-span-6 lg:col-start-7 flex items-end">
-            <p className="text-xl text-stone-500 leading-relaxed font-light">
-              Showcasing our successful track record
-            </p>
-          </div>
         </div>
 
         {/* Artistic Timeline with Tree Growth */}
@@ -139,55 +134,28 @@ export function HistorySection({ expandedYears, toggleYear }) {
               {item.description}
             </p>
                         
-            {/* Images */}
-            {item.images ? (
-              <div className="flex flex-col gap-6 max-w-5xl mx-auto">
-                {item.images.map((img, imgIndex) => {
-                  // Encode spaces for proper URL encoding
-                  const encodedImg = img.replace(/ /g, '%20');
-                  return (
-                    <div key={imgIndex} className="relative group/img w-full">
-                      <div className="aspect-[16/10] overflow-hidden bg-stone-100 rounded-lg">
-                        <img 
-                          src={encodedImg} 
-                          alt={`K-LIFE Estate ${item.year} - ${imgIndex + 1}`}
-                          className="w-full h-full object-cover transition-all duration-1000 ease-out group-hover/img:scale-105"
-                          onError={(e) => {
-                            console.error('Failed to load image:', img, 'Encoded:', encodedImg);
-                            e.target.parentElement.innerHTML = `
-                              <div class="w-full h-full bg-gradient-to-br from-emerald-900 via-emerald-800 to-stone-900 flex items-center justify-center">
-                                <span class="text-white/30 text-xs uppercase tracking-widest">Estate ${item.year}</span>
-                              </div>
-                            `;
-                          }}
-                        />
+            {/* Images - Only first image, same size for all */}
+            <div className="relative group/img max-w-2xl mx-auto">
+              <div className="aspect-[16/10] overflow-hidden bg-stone-100">
+                <img 
+                  src={(item.images ? item.images[0] : item.image).replace(/ /g, '%20')} 
+                  alt={`K-LIFE Estate ${item.year}`}
+                  className="w-full h-full object-cover transition-all duration-1000 ease-out group-hover/img:scale-105"
+                  onError={(e) => {
+                    const imgSrc = item.images ? item.images[0] : item.image;
+                    console.error('Failed to load image:', imgSrc);
+                    e.target.parentElement.innerHTML = `
+                      <div class="w-full h-full bg-gradient-to-br from-emerald-900 via-emerald-800 to-stone-900 flex items-center justify-center">
+                        <span class="text-white/30 text-sm uppercase tracking-widest">Estate ${item.year}</span>
                       </div>
-                    </div>
-                  );
-                })}
+                    `;
+                  }}
+                />
               </div>
-            ) : (
-              <div className="relative group/img max-w-2xl mx-auto">
-                <div className="aspect-[16/10] overflow-hidden bg-stone-100">
-                  <img 
-                    src={item.image.replace(/ /g, '%20')} 
-                    alt={`K-LIFE Estate ${item.year}`}
-                    className="w-full h-full object-cover transition-all duration-1000 ease-out group-hover/img:scale-105"
-                    onError={(e) => {
-                      console.error('Failed to load image:', item.image);
-                      e.target.parentElement.innerHTML = `
-                        <div class="w-full h-full bg-gradient-to-br from-emerald-900 via-emerald-800 to-stone-900 flex items-center justify-center">
-                          <span class="text-white/30 text-sm uppercase tracking-widest">Estate ${item.year}</span>
-                        </div>
-                      `;
-                    }}
-                  />
-                </div>
-                {/* Artistic frame corners */}
-                <div className="absolute -top-2 -left-2 w-6 h-6 border-l border-t border-emerald-800/30" />
-                <div className="absolute -bottom-2 -right-2 w-6 h-6 border-r border-b border-emerald-800/30" />
-              </div>
-            )}
+              {/* Artistic frame corners */}
+              <div className="absolute -top-2 -left-2 w-6 h-6 border-l border-t border-emerald-800/30" />
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-r border-b border-emerald-800/30" />
+            </div>
                       </div>
                     </div>
                   </div>
