@@ -30,7 +30,7 @@ export const timelineData = [
     year: '2019 - 2022',
     title: 'Marking six years of growth...',
     description: 'By this point the trees have reached the stage where they give the entire plantation the look that was envisioned at the beginning of K-LIFE; a planned plantation of agarwood trees in arrow straight lines.',
-    image: '/images/1.Project History/History/History/2019/IMG-20190307-WA0052.jpg',
-    images: ['/images/1.Project History/History/History/2019/IMG-20190307-WA0052.jpg', '/images/1.Project History/History/History/2019/IMG-20210601-WA0008.jpg', '/images/1.Project History/History/History/2019/IMG-20230104-WA0023.jpg']
+    image: '/images/1.Project History/History/History/2022/2022.jpeg',
+    images: ['/images/1.Project History/History/History/2022/2022.jpeg']
   }
 ];

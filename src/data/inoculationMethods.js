@@ -46,8 +46,7 @@ export const inoculationMethods = [
       '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Pipe Method 1.jpeg', 
       '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Pipe Method 2.jpeg',
       '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Pipe Method 3.jpg',
-      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Pipe Method 4.jpg',
-      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Pipe Method 5.jpg'
+      '/images/2.Field Trial Documentation/Inoculation_Images_Extracted/Pipe Method 4.jpg'
     ]
   }
 ];

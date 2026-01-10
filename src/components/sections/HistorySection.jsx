@@ -136,11 +136,11 @@ export function HistorySection({ expandedYears, toggleYear }) {
                         
             {/* Images - Only first image, same size for all */}
             <div className="relative group/img max-w-2xl mx-auto">
-              <div className="aspect-[16/10] overflow-hidden bg-stone-100">
+              <div className={`overflow-hidden bg-stone-100 ${item.year === '2019 - 2022' ? 'aspect-square' : 'aspect-[16/10]'}`}>
                 <img 
                   src={(item.images ? item.images[0] : item.image).replace(/ /g, '%20')} 
                   alt={`K-LIFE Estate ${item.year}`}
-                  className="w-full h-full object-cover transition-all duration-1000 ease-out group-hover/img:scale-105"
+                  className={`w-full h-full transition-all duration-1000 ease-out group-hover/img:scale-105 ${item.year === '2019 - 2022' ? 'object-contain' : 'object-cover'}`}
                   onError={(e) => {
                     const imgSrc = item.images ? item.images[0] : item.image;
                     console.error('Failed to load image:', imgSrc);
