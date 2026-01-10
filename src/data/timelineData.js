@@ -17,8 +17,8 @@ export const timelineData = [
     year: '2017',
     title: '3-4 years of age at this point.. Agarwood plants were transitioning from sapling to young trees.',
     description: 'The plantation continued to mature steadily year on year, with tree spacing deliberately maintained at a minimum of six feet from the base of each tree in all directions — a standard established early and continues to be observed today. This spacing was designed to minimize root competition and prevent root entanglement, ensuring adequate soil volume, nutrient access, and structural stability. These conditions are critical for healthy tree development and for the long-term formation of resin-bearing agarwood.',
-    image: '/images/1.Project History/History/History/2017/DJI00361.JPG',
-    images: ['/images/1.Project History/History/History/2017/DJI00361.JPG', '/images/1.Project History/History/History/2017/DJI00364.JPG']
+    image: '/images/1.Project History/History/History/2017/2017.jpeg',
+    images: ['/images/1.Project History/History/History/2017/2017.jpeg', '/images/1.Project History/History/History/2017/DJI00364.JPG']
   },
   {
     year: '2018',
